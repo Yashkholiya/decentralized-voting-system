@@ -1,0 +1,14 @@
+type CreateQuestion = record { "text" : text; options : vec text };
+type Question = record {
+  id : nat64;
+  votes : vec nat64;
+  "text" : text;
+  options : vec text;
+};
+type Result = variant { Ok : text; Err : text };
+service : {
+  create_question : (CreateQuestion) -> (text);
+  get_all_questions : () -> (vec Question) query;
+  get_vote_count : (nat64) -> (opt vec nat64) query;
+  vote : (nat64, nat64) -> (Result);
+}

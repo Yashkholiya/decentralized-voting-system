@@ -1,0 +1,139 @@
+/* index.scss */
+
+/* Base Styles */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+.App {
+  padding: 20px;
+}
+
+/* Heading */
+h1 {
+  text-align: center;
+  font-size: 2.5em;
+  color: #007bff;
+  margin-bottom: 40px;
+}
+
+/* Question Card */
+.question {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 30px;
+  transition: all 0.3s ease;
+  animation: fadeInUp 0.5s ease;
+}
+
+.question:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.question h2 {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Options */
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.options button {
+  padding: 12px 25px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 100%;
+}
+
+.options button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.options button:active {
+  transform: translateY(2px);
+}
+
+.options button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Vote Count Section */
+.vote-count {
+  margin-top: 20px;
+}
+
+.vote-count p {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #555;
+}
+
+.vote-count ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.vote-count li {
+  font-size: 1.1em;
+  margin: 8px 0;
+  color: #666;
+}
+
+.vote-count li span {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Fade In Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .App {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  .question h2 {
+    font-size: 1.3em;
+  }
+
+  .options button {
+    font-size: 1em;
+    padding: 10px 20px;
+  }
+}

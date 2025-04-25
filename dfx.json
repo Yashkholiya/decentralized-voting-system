@@ -1,0 +1,27 @@
+{
+  "canisters": {
+    "votingsystem_backend": {
+      "candid": "src/votingsystem_backend/votingsystem_backend.did",
+      "package": "votingsystem_backend",
+      "type": "rust"
+    },
+    "votingsystem_frontend": {
+      "dependencies": [
+        "votingsystem_backend"
+      ],
+      "source": [
+        "src/votingsystem_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "votingsystem_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
